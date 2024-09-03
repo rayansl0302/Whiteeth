@@ -52,11 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("footer form");
+    const emailInput = form.querySelector("input[type='email']");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Previne o envio real do formulário
 
-        // Se você quiser implementar um toast customizado, pode usar o código abaixo:
+        // Exibe o toast customizado
         const toast = document.createElement("div");
         toast.innerText = "Cadastro realizado com sucesso!";
         toast.style.position = "fixed";
@@ -73,5 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
             toast.remove();
         }, 3000);
+
+        // Limpa o campo de input após o envio
+        emailInput.value = '';
     });
 });
