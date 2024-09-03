@@ -177,17 +177,18 @@ function atualizarContadorCarrinho(totalProdutos) {
 }
 
 // Função para exibir um toast na tela
-function mostrarToast(mensagem, totalProdutos) {
+function mostrarToast(mensagem) {
     const toast = document.createElement('div');
     toast.className = 'toast';
 
     toast.innerHTML = `
       <div>${mensagem}</div>
-      <div>Produtos adicionados: ${totalProdutos}</div>
+      <button class="btn-ver-carrinho">Ver Carrinho</button>
     `;
 
     document.body.appendChild(toast);
 
+    // Estilos do toast
     toast.style.position = 'fixed';
     toast.style.bottom = '20px';
     toast.style.left = '50%';
@@ -200,16 +201,24 @@ function mostrarToast(mensagem, totalProdutos) {
     toast.style.opacity = '0';
     toast.style.transition = 'opacity 0.5s ease-in-out';
 
+    // Exibe o toast
     setTimeout(() => {
         toast.style.opacity = '1';
     }, 100);
 
+    // Esconde o toast após 3 segundos
     setTimeout(() => {
         toast.style.opacity = '0';
         setTimeout(() => {
             document.body.removeChild(toast);
         }, 500);
     }, 3000);
+
+    // Adiciona evento de clique para o botão "Ver Carrinho"
+    const btnVerCarrinho = toast.querySelector('.btn-ver-carrinho');
+    btnVerCarrinho.addEventListener('click', () => {
+        listarProdutosCarrinho(); // Abre o modal do carrinho
+    });
 }
 
 // Evento de clique para adicionar produto ao carrinho
