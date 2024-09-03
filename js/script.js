@@ -183,7 +183,7 @@ function mostrarToast(mensagem) {
 
     toast.innerHTML = `
       <div>${mensagem}</div>
-      <button class="btn-ver-carrinho">Ver Carrinho</button>
+      <button class="btn-ver-carrinho" onclick="abrirModalCarrinho()">Ver Carrinho</button>
     `;
 
     document.body.appendChild(toast);

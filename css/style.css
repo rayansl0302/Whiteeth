@@ -472,6 +472,21 @@ footer button {
   text-decoration: none;
   cursor: pointer;
 }
+/* Estilos para o botão Ver Carrinho no Toast */
+.toast .btn-ver-carrinho {
+  background-color: #1abc9c; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 5px 10px; /* Espaçamento interno */
+  margin-top: 10px; /* Margem superior */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o ponteiro de clique */
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+}
+
+.toast .btn-ver-carrinho:hover {
+  background-color: #16a085; /* Cor de fundo mais escura ao passar o mouse */
+}
 
 /* Responsividade */
 
