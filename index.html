@@ -23,26 +23,42 @@
         >
           <button class="btn-todos_produtos flex-wrap roboto">
             <img class="mr-5" src="img/icons/ic_round-menu.svg" alt="" /><p>Todos
-                os produtos</p>
+              os produtos</p>
           </button>
           <div class="logo d-flex justify-content-center">
             <img src="./img/logo/logo-witheet.svg" alt="" />
           </div>
-          <div class="button-section d-flex">
+          <div class="button-section d-flex align-items-center">
             <button class="btn-assinar pointer roboto">Assinar whiteeth</button>
             <img
               class="pointer"
               src="./img/icons/ic_baseline-account-circle.svg"
-              alt=""
+              alt="Conta"
             />
-            <img
-              class="pointer"
-              src="./img/icons/ic_baseline-add-shopping-cart.svg"
-              alt=""
-            />
+            <!-- Shopping cart icon with a counter -->
+            <div class="cart-icon-container position-relative">
+              <img
+                class="pointer"
+                src="./img/icons/ic_baseline-add-shopping-cart.svg"
+                alt="Carrinho de Compras"
+                onclick="abrirModalCarrinho()"
+              />
+              <!-- Counter badge -->
+              <span class="cart-counter">0</span>
+            </div>
+            <!-- Modal de Carrinho -->
+            <div id="cartModal" class="modal">
+                <div class="modal-content">
+                <span class="close" onclick="fecharModalCarrinho()">&times;</span>
+                <h2>Produtos no Carrinho</h2>
+                <div id="cartItems"></div> <!-- Lista de produtos -->
+                <button class="btn-assinar mt-5 pointer" onclick="fecharModalCarrinho()">Fechar</button>
+                </div>
+            </div>
           </div>
         </div>
       </nav>
+      
     </header>
     <section class="banner-section">
       <div class="container h-100">
@@ -96,7 +112,7 @@
               <h4>Hortelã</h4>
             </div>
             <div class="card-price">R$70,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -115,7 +131,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -134,7 +150,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -153,7 +169,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
         </div>
       </section>
@@ -176,7 +192,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -194,7 +210,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -212,7 +228,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
   
         </div>
@@ -236,7 +252,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
           <div class="card">
             <div class="card-value-promotion">30% off</div>
@@ -254,7 +270,7 @@
             </div>
             <div class="card-price-promotional">R$70,90</div>
             <div class="card-price">R$50,90</div>
-            <div class="btn-carrinho pointer">Adicionar ao Carrinho</div>
+            <div class="btn-carrinho pointer" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</div>
           </div>
         
       </section>
