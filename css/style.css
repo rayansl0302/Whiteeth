@@ -12,6 +12,9 @@ a {
 .d-flex {
   display: flex;
 }
+.d-none {
+  display: none;
+}
 .justify-content-center {
   justify-content: center;
 }
@@ -93,11 +96,11 @@ a {
 .mb-5 {
   margin-bottom: 5px;
 }
-.mr-20{
-    margin-right: 20%;
+.mr-20 {
+  margin-right: 20%;
 }
-.ml-20{
-    margin-left: 20%;
+.ml-20 {
+  margin-left: 20%;
 }
 .g-5 {
   gap: 5px;
@@ -192,6 +195,11 @@ nav {
   color: #f7c325;
   font-weight: 500;
   text-align: center;
+}
+.filter-content {
+  max-width: 1200px;
+  overflow-x: auto;
+  padding: 15px;
 }
 .filter-content .btn-filtros {
   background-color: transparent;
@@ -332,28 +340,28 @@ footer .banner-footer img {
   margin-left: auto;
   margin-right: auto;
 }
-footer h2{
-    color: #1e000e;
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: -1px;
+footer h2 {
+  color: #1e000e;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -1px;
 }
-footer input{
-    border: 2px solid #1e000e;
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 10px;
+footer input {
+  border: 2px solid #1e000e;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
 }
-footer button{
-    background-color: #F7C325;
-    border: none;
-    padding: 12px 24px 12px 24px;
-    border-radius: 8px;
-    width: 94px;
-    height: 48px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
+footer button {
+  background-color: #f7c325;
+  border: none;
+  padding: 12px 24px 12px 24px;
+  border-radius: 8px;
+  width: 94px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
 }
 .fly-button {
   position: fixed;
@@ -406,5 +414,84 @@ footer button{
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  header nav .container {
+    display: flex;
+    flex-direction: row;
+  }
+  header nav .btn-todos_produtos {
+    width: 50px;
+  }
+  header nav .btn-todos_produtos p {
+    display: none;
+  }
+  header nav .container .btn-assinar {
+    display: none;
+  }
+  .btn-assinar-mobile {
+    margin-top: 35vh;
+    margin-left: 5%;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+  .banner-section {
+    background-image: url("../img/banner/banner-topo-mobile.webp");
+    background-size: contain;
+  }
+  .banner-section .col-banner-esquerda {
+    width: 100%;
+    height: 42.9vh;
+  }
+  .banner-section .col-banner-direita {
+    width: 100%;
+    background: linear-gradient(180deg, #ba8c66 20%, #a37654 100%);
+  }
+  .banner-section .col-banner-direita .banner-section_text {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+  .banner-section .col-banner-direita .banner-section_text h1 {
+    font-size: 36px;
+  }
+  .banner-section .col-banner-direita .banner-section_text span {
+    font-size: 36px;
+  }
+  .banner-section .col-banner-direita .banner-section_text p {
+    font-size: 24px;
+  }
+  .filter-content .btn-menu-filtro {
+    width: 126px;
+    white-space: nowrap;
+  }
+  .fly-button {
+    bottom: 50%;
+  }
+  footer .col-4 {
+    width: 100%;
+  }
+  footer .col-8 {
+    width: 100%;
+    background-color: #fdf3d3;
+  }
+  footer .g-5 {
+    flex-wrap: wrap;
+  }
+  footer form button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  footer .mr-20 {
+    margin-right: 5% !important;
+  }
+  footer .ml-20 {
+    margin-left: 5% !important;
   }
 }
