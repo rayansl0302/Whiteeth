@@ -68,20 +68,17 @@
         <button
           class="pointer btn-filtros d-flex justify-content-center align-items-center"
         >
-          <img
-            class="mr-5"
-            src="./img/icons/ic_round-filter-list.svg"
-            alt=""
-          />Filtros
+          <img class="mr-5" src="./img/icons/ic_round-filter-list.svg" alt="" />Filtros
         </button>
-        <div class="btn-menu-filtro pointer active">Todos</div>
-        <div class="btn-menu-filtro pointer">Pasta de dente</div>
-        <div class="btn-menu-filtro pointer">Escova de dente</div>
-        <div class="btn-menu-filtro pointer">Raspador de lingua</div>
-        <div class="btn-menu-filtro pointer">Clareamento</div>
-        <div class="btn-menu-filtro pointer">Aparelhos ortodônticos</div>
+        <div class="btn-menu-filtro pointer active" data-filter="all">Todos</div>
+        <div class="btn-menu-filtro pointer" data-filter="Pasta de dente">Pasta de dente</div>
+        <div class="btn-menu-filtro pointer" data-filter="Escovas de dente">Escova de dente</div>
+        <div class="btn-menu-filtro pointer" data-filter="Raspador de lingua">Raspador de lingua</div>
+        <div class="btn-menu-filtro pointer" data-filter="Clareamento">Clareamento</div>
+        <div class="btn-menu-filtro pointer" data-filter="Aparelhos ortodônticos">Aparelhos ortodônticos</div>
+        <div class="btn-menu-filtro pointer" data-filter="Outros">Outros</div>
       </div>
-      <section class="produtos mt-5 mb-5">
+      <section id="pasta-dente" class="produtos mt-5 mb-5">
         <h3 class="w-100">Pasta de dente</h3>
         <div class="d-flex g-5 justify-content-evenly produto-category">
           <div class="card">
@@ -160,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section class="produtos mt-5 mb-5">
+      <section id="escova-dente" class="produtos mt-5 mb-5">
         <h3 class="w-100">Escovas de dente</h3>
         <div class="d-flex g-5 justify-content-start produto-category">
           <div class="card">
@@ -220,7 +217,7 @@
   
         </div>
       </section>
-      <section class="produtos mt-5 mb-5">
+      <section id="outros" class="produtos mt-5 mb-5">
         <h3 class="w-100">Outros</h3>
         <div class="d-flex g-5 justify-content-start produto-category">
           <div class="card">
@@ -261,8 +258,11 @@
           </div>
         
       </section>
+      <div class="no-products" style="display:none; text-align:center; margin-top:20px;">
+        Não há produtos na categoria selecionada
+      </div>
     </div>
-    <footer>
+    <footer> 
         <div class="row w-100">
             <div class="col-4 banner-footer">
                 <img src="./img/icons/logo-icon-w.svg" alt="" />
@@ -281,5 +281,6 @@
     <div class="fly-button">
       <img src="./img/icons/ic_round-3p.svg" alt="" />
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
