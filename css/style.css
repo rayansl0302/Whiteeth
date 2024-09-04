@@ -508,6 +508,33 @@ footer button {
 }
 
 /* Responsividade */
+@media screen and (min-width: 575px) and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .banner-section .col-banner-esquerda {
+    height: 48vh;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .banner-section .col-banner-esquerda {
+    height: 65vh !important;
+  }
+}
+@media (max-width: 384px) {
+  .container {
+    max-width: 100%;
+  }
+  .banner-section .col-banner-esquerda {
+    height: 35vh !important;
+  }
+  .btn-assinar-mobile {
+    margin-top: 28vh;
+  }
+}
 
 @media (max-width: 768px) {
   header nav .container {
@@ -521,6 +548,9 @@ footer button {
     display: none;
   }
   header nav .container .btn-assinar {
+    display: none;
+  }
+  .btn-assinar-topo {
     display: none;
   }
   .btn-assinar-mobile {
