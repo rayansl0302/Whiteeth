@@ -158,6 +158,17 @@ nav {
   color: #fff;
   border-radius: 8px;
 }
+.btn-assinar-topo{
+  width: 172px;
+  height: 48px;
+  padding: 12px 24px 12px 24px;
+  gap: 8px;
+  opacity: 0px;
+  border: none;
+  background-color: #1e000e;
+  color: #fff;
+  border-radius: 8px;
+}
 .banner-section {
   background-image: url("../img/banner/banner-topo-desktop.webp");
   background-repeat: no-repeat;
