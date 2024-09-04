@@ -9,11 +9,8 @@ script.js: Arquivo JavaScript para manipulação de eventos na página, como a f
 Seções Principais
 Cabeçalho (<header>):
 
-Inclui um banner superior com uma oferta promocional, o logotipo da marca, e botões para assinatura, login, e carrinho de compras.
+Inclui um banner, uma navbar superior, o logotipo da marca, e botões para assinatura, login, e carrinho de compras.
 Seção de Banner (<section class="banner-section">):
-
-Contém uma introdução aos produtos de higiene bucal, destacando a missão de cuidar do sorriso e do planeta.
-Seção de Filtros e Produtos (<section class="produtos">):
 
 Exibe categorias de produtos com um botão de filtro para selecionar diferentes tipos de produtos.
 Produtos são organizados em cartões (<div class="card">), com detalhes como imagem, nome, preço, e um botão de "Adicionar ao Carrinho".
